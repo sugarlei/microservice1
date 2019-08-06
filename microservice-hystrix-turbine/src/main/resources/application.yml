@@ -1,0 +1,16 @@
+server:
+  port: 8031
+spring:
+  application:
+    name: microservice-hystrix-turbine
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123456@localhost:8763/eureka/
+  instance:
+    prefer-ip-address: true
+turbine:
+  app-config: consumer-movie,consumer-movie-feign-hystrix-fallback-factory
+  cluster-name-expression: "'default'"
+#  使用以上配置，Turbine 会在Eureka Server中找到consumer-movie和consumer-movie-feign-hystrix-fallback-factory这两个微服务，
+#  并聚合两个微服务的监控数据。

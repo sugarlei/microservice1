@@ -1,0 +1,39 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: consumer-movie-feign-hystrix-fallback-factory
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123456@localhost:8763/eureka/
+  #http://localhost:8761/eureka/,http://localhost:8762/eureka/
+  instance:
+    prefer-ip-address: true #表示将自己的IP注册到 eureka server 如果不设置 则默认为false 则表示讲服务所在的机器的hostname注册到 eureka server
+#启用熔断器
+feign:
+  hystrix:
+    enabled: true
+#    配置ribbon
+stu-provide:
+  ribbon:
+    #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #配置规则 随机
+    #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule #配置规则 轮询
+    #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RetryRule #配置规则 重试
+    #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule #配置规则 响应时间权重
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule #配置规则 最空闲连接策略
+    ConnectTimeout: 500 #请求连接超时时间
+    ReadTimeout: 1000 #请求处理的超时时间
+    OkToRetryOnAllOperations: true #对所有请求都进行重试
+    MaxAutoRetriesNextServer: 2 #切换实例的重试次数
+    MaxAutoRetries: 1 #对当前实例的重试次数
+  #springcloud 中使用 hystrix-dashboard 进行监控的时候启动报错"path":"/actuator/hystrix.stream","status":404,"error":"Not Found"
+  #
+  #这是因为springboot2.x使用了endpoint
+  #
+  #解决办法是在被监控的微服务的.yml文件中加入如下配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,33 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: microservice-gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://user:123456@localhost:8763/eureka/
+# ========添加如下配置才能访问http://localhost:8040/actuator/routes，否则404
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #注意这里*要加引号，暴露全部，也可以只暴露相应endpoint
+#  endpoint:
+#    routes:
+#      enabled: true # 默认为true，可以省略
+#自定义指定微服务的访问路径
+zuul:
+  routes:
+    consumer-movie: /movie/*
+#    provider-user: /user/*  #这样设置，provider-user微服务就会被映射到/user/*路径。
+    user-route:   #这种配置方式与上边的方式效果相同，user-route只是给路由起了个名称，可以任意起名
+      service-id: consumer-movie
+      url: http:localhost:8092  #也可以指定url
+      path: /user/*   #service-id对应的访问路径
+#忽略指定服务
+#  ignored-services: consumer-movie,provider-user
+#  ignored-services: '*'    #就可以忽略所有微服务只路由routes下的微服务
+#  这样就可让Zuul忽略consumer-movie和provider-user微服务，只代理其他微服务。
+#忽略敏感路径
+  ignored-patterns: /**/admin/**  #忽略所有包含/admin/的路径

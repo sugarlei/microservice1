@@ -1,0 +1,8 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: consumer-movie
+provider-user:
+  ribbon:
+    listOfServers: localhost:8091,localhost:8092

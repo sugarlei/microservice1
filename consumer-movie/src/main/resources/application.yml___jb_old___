@@ -1,0 +1,12 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: consumer-movie
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123456@peer1:8763/eureka/
+#http://peer1:8761/eureka/,http://peer2:8762/eureka/
+  instance:
+    prefer-ip-address: true #表示将自己的IP注册到 eureka server 如果不设置 则默认为false 则表示讲服务所在的机器的hostname注册到 eureka server
