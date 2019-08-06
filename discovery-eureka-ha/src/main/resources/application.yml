@@ -2,12 +2,12 @@ server:
   port: 8762
 spring:
   application:
-    name:  eureka-ha-server
+    name: eureka-ha-server
 eureka:
   instance:
-    hostname: peer2
+    hostname: localhost
   client:
     #    register-with-eureka: false #是否将自己注册到 eureka server，默认为true,此处是 server, 所以不注册
     #    fetch-registry: false       #表示是否从eureka server 获取注册信息，默认为true,此处为单节点，不需要从其他eureka server同步 所以为false
     serviceUrl:                #与eureka server交互的地址，多个以逗号隔开，服务注册与发现依赖此地址
-      defaultZone: http://peer1:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/

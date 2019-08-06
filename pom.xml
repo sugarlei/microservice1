@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ln</groupId>
+    <version>1.0</version>
+    <artifactId>microservice.root</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>consumer-movie</module>
+        <module>consumer-movie-feign</module>
+        <module>consumer-movie-feign-hystrix-fallback</module>
+        <module>consumer-movie-feign-hystrix-fallback-factory</module>
+        <module>consumer-movie-feign-manual</module>
+        <module>consumer-movie-ribbon</module>
+        <module>consumer-movie-ribbon-hystrix</module>
+        <module>consumer-movie-without-eureka</module>
+        <module>discovery-eureka</module>
+        <module>discovery-eureka-authenticating</module>
+        <module>discovery-eureka-ha</module>
+        <module>microservice-gateway-zuul</module>
+        <module>microservice-hystrix-dashboard</module>
+        <module>microservice-hystrix-turbine</module>
+        <module>provider-user</module>
+        <module>provider-user-with-auth</module>
+    </modules>
+</project>
