@@ -1,0 +1,24 @@
+server:
+  port: 8050
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123456@localhost:8763/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: microservice-file-upload
+    #升级到SpringBoot2.0后，下面1.0的配置是不起作用的，需要将其更改为：
+  #  http:
+  #    multipart:
+  #      max-file-size: 2000mb #Max file size,默认1M
+  #      max-request-size: 2500mb #Max request size， 默认10M
+  servlet:
+    multipart:
+      max-file-size: 200000
+      max-request-size: 2500000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
