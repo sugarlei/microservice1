@@ -50,3 +50,18 @@ microservice-file-upload           文件上传
 
 ### Sidecar微服务
 microservice-sidecar            Sidecar微服务，并使用Sidecar 整合非JVM微服务。实例中sidecar与非jvm服务不在同一个ip上
+
+### Spring config server
+microservice-config-server      构建了Config Server,并通过构造URL的方式，获取了Git仓库中的
+                                配置信息。
+                                
+microservice-config-client-refresh-cloud-bus    config server 使用spring cloud bus 基于rabbitmq实现
+                                                自动刷新 config client
+
+### Spring config client                                                
+microservice-config-client      构建一个config client
+
+
+microservice-config-client-refresh  手动刷新
+
+microservice-config-client-refresh-cloud-bus      使用spring cloud bus 配合rabbitmq自动刷新                                         
