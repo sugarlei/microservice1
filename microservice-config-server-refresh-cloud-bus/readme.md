@@ -6,4 +6,5 @@
 新的职责。
 cmd 执行如下
 curl -X POST http://localhost:8080/actuator/bus-refresh
+如图，可以只更新某个节点，也可以更新某个集群
 ![](.readme_images/edae622b.png)
