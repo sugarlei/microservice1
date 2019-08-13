@@ -36,3 +36,17 @@ provider-user                      服务提供者，注册到eureka server
 provider-user-with-auth            服务提供者，注册到eureka server, 增加security
 ###zuul网关
 microservice-gateway-zuul          Zuul微服务网关，整合了Hystrix，使用ribbon实现负载均衡
+
+microservice-gateway-zuul-filter    Zuul微服务网关，整合了Hystrix，使用ribbon实现负载均衡,增加zuul过滤器
+
+microservice-gateway-zuul-fallback  zuul容错与回退
+
+
+microservice-gateway-zuul-aggregation   Zuul聚合了用户微服务以及电影微服务的RESTfulAPI
+
+
+###文件上传
+microservice-file-upload           文件上传
+
+###Sidecar微服务
+microservice-sidecar            Sidecar微服务，并使用Sidecar 整合非JVM微服务。实例中sidecar与非jvm服务不在同一个ip上

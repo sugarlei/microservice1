@@ -36,5 +36,14 @@ public class ConsumerMovieController {
         logger.info("{}:{}:{}", serviceInstance.getServiceId(), serviceInstance.getHost(), serviceInstance.getPort());
     }
 
+    /**
+     * 通过这种方式调用非jvm微服务
+     * @return
+     */
+    @GetMapping("/test")
+    public String test(){
+        return this.restTemplate.getForObject("http://microservice-sidecar-node-service/",String.class);
+    }
+
 }
 

@@ -29,10 +29,13 @@
         <module>discovery-eureka-authenticating</module>
         <module>discovery-eureka-ha</module>
         <module>microservice-gateway-zuul</module>
+        <module>microservice-gateway-zuul-filter</module>
+        <module>microservice-gateway-zuul-fallback</module>
         <module>microservice-hystrix-dashboard</module>
         <module>microservice-hystrix-turbine</module>
         <module>provider-user</module>
         <module>provider-user-with-auth</module>
         <module>microservice-file-upload</module>
+        <module>microservice-sidecar</module>
     </modules>
 </project>

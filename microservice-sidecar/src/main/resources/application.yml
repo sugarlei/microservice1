@@ -1,0 +1,18 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: microservice-sidecar-node-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123456@192.168.199.123:8763/eureka/
+  instance:
+    prefer-ip-address: true
+sidecar:
+  port: 8060              #非jvm微服务（nodejs）的端口
+  health-uri: http://192.168.199.123:8060/health.json #非jvm微服务（nodejs）的健康检查url
+  # 本例是将Sidecar与非JVM微服务部署在同一台主机上。现实中，常常会将Sidecar与
+  # JVM微服务分离部署，例如部署在不同的主机或者容器中。此时应该如何配置呢? 下边如下
+  hostname: 192.168.199.123 #非jvm微服务hostname
+  ip-address: 192.168.199.123 # 非jvm微服务 ip
