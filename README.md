@@ -1,6 +1,6 @@
-#微服务练习
-##此目录下均按照Spring Cloud与Docker微服务架构实战 .pdf编写
-###消费者部分
+# 微服务练习
+## 此目录下均按照Spring Cloud与Docker微服务架构实战 .pdf编写
+### 消费者部分
 consumer-movie                  使用eureka client实现服务发现的消费者服务
 
 consumer-movie-feign            使用eureka client实现服务发现，使用feign 声明式rest，
@@ -17,24 +17,24 @@ consumer-movie-ribbon           使用eureka配合ribbon 实现服务提供者�
 consumer-movie-ribbon-hystrix   使用eureka配合ribbon 实现服务提供者负载均衡，增加hystrix 熔断器
 
 consumer-movie-without-eureka   不用eureka只用ribbon实现负载均衡，针对未注册到eureka的服务
-###服务发现
+### 服务发现
 discovery-eureka                EurekaServer作为注册中心
 
 discovery-eureka-authenticating EurekaServer作为注册中心，增加用户认证
 
 discovery-eureka-ha             多个eureka server节点，相互注册
 
-###服务监控
+### 服务监控
 microservice-hystrix-dashboard   使用hystrix-dashboard实现可视化监控
 
 microservice-hystrix-turbine      Turbine是一个聚合Hystrix监控数据的工具，它可将所有相关/hystrix.stream端点的数据
                                   聚合到一个组合的/turbine.stream中，从而让集群的监控更加方便。
                                   
-###服务提供者
+### 服务提供者
 provider-user                      服务提供者，注册到eureka server
 
 provider-user-with-auth            服务提供者，注册到eureka server, 增加security
-###zuul网关
+### zuul网关
 microservice-gateway-zuul          Zuul微服务网关，整合了Hystrix，使用ribbon实现负载均衡
 
 microservice-gateway-zuul-filter    Zuul微服务网关，整合了Hystrix，使用ribbon实现负载均衡,增加zuul过滤器
@@ -45,8 +45,8 @@ microservice-gateway-zuul-fallback  zuul容错与回退
 microservice-gateway-zuul-aggregation   Zuul聚合了用户微服务以及电影微服务的RESTfulAPI
 
 
-###文件上传
+### 文件上传
 microservice-file-upload           文件上传
 
-###Sidecar微服务
+### Sidecar微服务
 microservice-sidecar            Sidecar微服务，并使用Sidecar 整合非JVM微服务。实例中sidecar与非jvm服务不在同一个ip上
