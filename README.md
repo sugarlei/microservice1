@@ -1,5 +1,6 @@
 # 微服务练习
 ## 此目录下均按照Spring Cloud与Docker微服务架构实战 .pdf编写
+pdf中demo基于spring boot1.x。本实例中基于spring boot 2.x 部分地方 2.x不支持踩坑 在readme中有提到
 ### 消费者部分
 consumer-movie                  使用eureka client实现服务发现的消费者服务
 
