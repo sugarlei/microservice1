@@ -1,0 +1,9 @@
+server:
+  port: 8082
+#  把refresh接入点显式暴露出来，之后就可以通过POST 调用/actuator/refresh 来更新配置了
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,bus-refresh
+#  如需禁用引导过程，可设置spring.cloud.bootstrap.enabled=false。

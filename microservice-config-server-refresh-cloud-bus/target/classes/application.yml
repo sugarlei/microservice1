@@ -1,0 +1,37 @@
+server:
+  port: 8080
+#  把refresh接入点显式暴露出来，之后就可以通过POST 调用/actuator/refresh 来更新配置了
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,bus-refresh
+spring:
+  application:
+    name: microservice-config-server
+  rabbitmq:
+    host: 192.168.168.129
+    port: 5672
+    username: admin
+    password: admin
+  cloud:
+    config:
+      server:
+        git:
+          #配置git仓库的地址
+          uri: https://github.com/sugarlei/spring-cloud-config-repo
+          #仓库路径
+#          search-paths: demo
+          username: 747459628@qq.com
+          password: leiNING19920807/
+        #自定义健康指示器的配置
+        health:
+          repositories:
+            a-foo:
+              label: config-label-v2.0
+              name: microservice-foo
+              profiles: dev
+logging:
+  level:
+    org.springframework.cloud: debug
+    org.springframework.boot: debug
