@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @author ：leining
  * @description：TODO
- * @date ： 2019/7/19 10:02
+ * @date ： 2019/10/19 10:02
  */
 @SpringBootApplication
 @EnableDiscoveryClient //支持eureka ,consol,zookeepr

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 /**
  * @author ：leining
  * @description：TODO
- * @date ： 2019/8/1 16:12
  */
 @Component
 public class CustomUserDetailService implements UserDetailsService {

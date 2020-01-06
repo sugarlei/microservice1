@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 /**
  * @author ：leining
  * @description：TODO
- * @date ： 2019/8/13 11:16
  */
 @SpringBootApplication
 public class ConfigClientApplication {

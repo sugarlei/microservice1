@@ -7,7 +7,6 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 /**
  * @author ：leining
  * @description：TODO
- * @date ： 2019/8/5 15:05
  */
 @SpringBootApplication
 @EnableTurbine

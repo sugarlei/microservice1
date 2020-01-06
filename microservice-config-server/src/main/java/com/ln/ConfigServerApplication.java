@@ -7,7 +7,6 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 /**
  * @author ：leining
  * @description：TODO
- * @date ： 2019/8/13 11:16
  */
 @SpringBootApplication
 @EnableConfigServer //添加注解@EnableConfigServer ,声明这是一个Config Server

@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author ：leining
  * @description：TODO
- * @date ： 2019/8/13 11:16
  */
 @SpringBootApplication
 public class ConfigClientApplication {

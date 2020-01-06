@@ -15,7 +15,6 @@ import java.io.InputStream;
 /**
  * @author ：leining
  * @description：TODO
- * @date ： 2019/8/12 14:23
  * ZuulFallbackProvider 已改为 FallbackProvider
  */
 @Component

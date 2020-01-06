@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @author ：leining
  * @description：TODO
- * @date ： 2019/7/19 10:05
+ * @date ： 2019/10/20 10:05
  */
 @RestController
 public class ConsumerMovieController {

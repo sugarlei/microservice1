@@ -14,7 +14,6 @@ import java.io.IOException;
 /**
  * @author ：leining
  * @description：上传文件
- * @date ： 2019/8/6 11:31
  */
 @Controller
 public class FileUploadController {

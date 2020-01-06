@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author ：leining
  * @description：TODO
- * @date ： 2019/8/13 11:50
  */
 @RestController
 public class ConfigClientController {
